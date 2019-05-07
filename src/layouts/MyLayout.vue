@@ -12,13 +12,15 @@
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
+          class="q-mr-sm"
         >
           <q-icon name="menu" />
         </q-btn>
-
+        <q-icon name="people"  style="font-size: 55px"></q-icon>
         <q-toolbar-title>
-          Quasar App
-          <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
+            
+          OCPS
+          <div slot="subtitle">Online Commodity Profile System</div>
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
@@ -57,9 +59,23 @@
     </q-layout-drawer>
 
     <q-page-container>
-      <router-view />
+      <q-page>
+        <router-view />
+      </q-page>
     </q-page-container>
+
+      <q-layout-footer>
+          <!-- <div class="row">
+              <div class="col-6">
+                <q-btn  icon="fa fa-sign-in-alt" flat label="LOG IN" color="secondary" size="lg" class="full-width"/>
+              </div>
+              <div class="col-6">
+                <q-btn  icon="fa fa-user-plus" flat label="REGISTER" color="primary" size="lg" class="full-width"/>
+              </div>
+          </div> -->
+      </q-layout-footer>
   </q-layout>
+
 </template>
 
 <script>
@@ -69,7 +85,7 @@ export default {
   name: 'MyLayout',
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
+      leftDrawerOpen: false
     }
   },
   methods: {

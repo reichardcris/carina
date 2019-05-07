@@ -9,8 +9,9 @@
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=master"
+    "deploy": "gh-pages -d dist/spa-mat"
   },
+  "homepage": "https://reichardcris.github.io/carina/",
   "dependencies": {
     "axios": "^0.18.0",
     "vue-i18n": "^7.3.3"
